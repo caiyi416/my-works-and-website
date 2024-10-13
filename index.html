@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsai Yi Chen's works and website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Taviraj:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Taviraj', serif;
+            background-color: #fff;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            font-family: 'Reenie Beanie', cursive;
+            text-align: center;
+            font-size: 2.5em;
+            margin: 20px 0;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .work-section {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .work-section img {
+            max-width: 300px;
+            height: auto;
+        }
+        .contact-form {
+            text-align: center;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 讓表單內容居中 */
+        }
+        .contact-form h2 {
+            margin-bottom: 20px; /* 增加標題與表單之間的間距 */
+        }
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 讓表單及按鈕居中 */
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 30%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            background-color: #f1f1f1;
+        }
+        section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        section.active {
+            display: block;
+            opacity: 1;
+        }
+        section.hidden {
+            display: none;
+        }
+
+        /* 自訂影片大小的 CSS */
+        .custom-video-size {
+            width: 100%; /* 設置影片寬度為容器的100% */
+            max-width: 800px; /* 設定最大寬度 */
+            height: auto; /* 自動調整高度，保持影片比例 */
+        }
+    </style>
+</head>
+<body>
+
+    <header>Tsai Yi Chen's works and website</header>
+
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('art-works')">Art Works</a>
+        <a href="#" onclick="showSection('poster-design')">Poster Design</a>
+        <a href="#" onclick="showSection('video-works')">Video Works</a>
+        <a href="#" onclick="showSection('digital-illustration')">Digital Illustration</a>
+        <a href="#" onclick="showSection('contact-form')">Contact</a> 
+    </nav>
+
+    <div class="container">
+        <section id="home" class="active">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Explore my artistic journey and various works.</p>
+        </section>
+
+        <section id="art-works" class="hidden">
+            <h2>Art Works</h2>
+            <img src="Artwork/forgive1.jpg" alt="Artwork 1" width="auto" height="150">
+            <img src="Artwork/forgive2.jpg" alt="Artwork 1" width="auto" height="150">
+            <img src="Artwork/forgive3.jpg" alt="Artwork 1" width="auto" height="150">
+            <img src="Artwork/forgive4.jpg" alt="Artwork 1" width="auto" height="150">
+            <img src="Artwork/forgive5.jpg" alt="Artwork 1" width="auto" height="150">
+            <img src="Artwork/forgive6.jpg" alt="Artwork 1" width="auto" height="150">
+            <img src="Artwork/forgive7.jpg" alt="Artwork 1" width="auto" height="150">
+            <img src="Artwork/forgive8.jpg" alt="Artwork 1" width="auto" height="150">
+            <p>展示您的平面藝術作品。</p>
+            <!-- Graphic art items here -->
+        </section>
+
+        <section id="poster-design" class="hidden">
+            <h2>Poster Design</h2>
+            <img src="Posterwork/鶄和果海報.jpg" alt="Artwork 1" width="auto" height="300">
+            <img src="Posterwork/粼粼海報.jpg" alt="Artwork 1" width="auto" height="300">
+            <p>展示您的海報設計作品。</p>
+            <!-- Poster design items here -->
+        </section>
+
+        <section id="video-works" class="hidden">
+            <h2>Video Works</h2>
+            <div class="work-item">
+                <video controls class="custom-video-size">
+                    <source src="Vediowork/沉迷.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Video Title 1</p>
+            </div>        
+            <p>展示您的影片作品。</p>
+            <!-- Video works items here -->
+        </section>
+
+        <section id="digital-illustration" class="hidden">
+            <h2>Digital Illustration</h2>
+            <img src="Digitalillustration/2021中秋節.jpg" alt="Artwork 1" width="auto" height="150">
+            <img src="Digitalillustration/2021萬聖節.jpg" alt="Artwork 1" width="auto" height="150">
+            <img src="Digitalillustration/2022母親節.jpg" alt="Artwork 1" width="auto" height="150">
+            <img src="Digitalillustration/2023科基.jpg" alt="Artwork 1" width="auto" height="150">
+            <p>展示您的數字插畫作品。</p>
+            <!-- Digital illustration items here -->
+        </section>
+
+        <section id="contact-form" class="contact-form">
+            <h2>Contact Me</h2>
+            <form action="https://formspree.io/f/xyzyyzjr" method="POST"> <!-- Replace with your action -->
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Tsai Yi Chen. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.add('hidden');  // 隱藏所有區塊
+                section.classList.remove('active'); // 移除所有區塊的 active 狀態
+            });
+
+            var activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.remove('hidden');  // 顯示選定的區塊
+                activeSection.classList.add('active'); // 添加 active 狀態讓其可見
+            }
+        }
+    </script>
+</body>
+</html>
